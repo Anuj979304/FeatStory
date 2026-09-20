@@ -1,0 +1,11 @@
+student_id,gender,study_hours,attendance,assignments,previous_score,final_score
+101,Male,4,85,8,72,78
+102,Female,6,90,9,80,86
+103,Male,2,65,6,60,64
+104,Female,8,95,10,88,94
+105,Male,3,70,7,65,69
+106,Female,7,92,9,84,89
+107,Male,1,55,5,50,56
+108,Female,5,88,8,76,82
+109,Female,9,97,10,91,96
+110,Male,4,75,7,68,73
