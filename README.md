@@ -1,6 +1,9 @@
 # FeatStory
 
 ### Don't just know which features matter. Understand why.
+## 📊 Example Report
+
+![FeatStory Report](report_preview.png)
 
 FeatStory is a Python data science library designed to help users understand the relationships between dataset features and a target variable.
 
