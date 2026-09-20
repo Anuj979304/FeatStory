@@ -2,43 +2,55 @@
 
 ### Don't just know which features matter. Understand why.
 
-FeatStory is a Python data science library that helps you understand how features in a dataset relate to a target variable.
+FeatStory is a Python data science library designed to help users understand the relationships between dataset features and a target variable.
 
-Instead of only showing numbers, FeatStory creates simple **feature stories**, identifies possible data risks, analyzes categorical features, calculates model-based feature importance, and generates visual reports.
+Instead of only producing statistical values, FeatStory turns analysis into simple **feature stories**, identifies possible data risks, analyzes categorical features, calculates model-based feature importance, provides SHAP explanations, and generates an HTML report.
 
-## Features
+## ✨ Features
 
-* Dataset profiling
-* Missing-value detection
-* Duplicate-row detection
-* Constant-column detection
-* Possible ID-column detection
-* High-cardinality detection
-* Feature-target correlation analysis
-* Simple feature stories
-* Categorical feature analysis
-* Data-risk warnings
-* Random Forest feature importance
-* SHAP-based model explanation
-* Correlation visualizations
-* HTML report generation
-* Automated tests with pytest
+* 📊 Dataset profiling
+* 🔎 Missing-value detection
+* 🔎 Duplicate-row detection
+* 🔎 Constant-column detection
+* 🆔 Possible ID-column detection
+* 📈 Feature-target correlation analysis
+* 📝 Simple feature stories
+* 🏷️ Categorical feature analysis
+* ⚠️ Data-risk warnings
+* 🌲 Random Forest feature importance
+* 🔬 SHAP-based model explanation
+* 📉 Correlation visualization
+* 📄 Automatic HTML report generation
+* 🧪 Automated tests with pytest
 
-## Installation
+## 🚀 Quick Start
 
-Clone the repository and create a virtual environment:
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Anuj979304/FeatStory.git
+cd FeatStory
+```
+
+### 2. Create a virtual environment
 
 ```bash
 python -m venv .venv
 ```
 
-Activate the environment and install the required packages:
+Activate it on Windows:
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+### 3. Install dependencies
 
 ```bash
 pip install pandas numpy matplotlib scikit-learn shap pytest
 ```
 
-## Basic Usage
+### 4. Analyze a dataset
 
 ```python
 from featstory import Story
@@ -65,11 +77,11 @@ story.explain_model()
 story.generate_report()
 ```
 
-## Example Dataset
+## 📚 What FeatStory Analyzes
 
-FeatStory can analyze datasets containing numerical and categorical features.
+FeatStory can work with datasets containing numerical and categorical features.
 
-Example:
+For example:
 
 ```text
 student_id
@@ -81,7 +93,7 @@ previous_score
 final_score
 ```
 
-For example, FeatStory can identify relationships such as:
+It can analyze relationships such as:
 
 ```text
 study_hours → final_score
@@ -89,9 +101,65 @@ attendance → final_score
 previous_score → final_score
 ```
 
-It can also compare the target across categorical groups such as gender.
+For categorical variables, it can compare target values across different categories.
 
-## Project Structure
+## ⚠️ Data Risk Detection
+
+FeatStory can identify potential issues such as:
+
+* Missing values
+* Duplicate rows
+* Possible identifier columns
+* High-cardinality categorical columns
+* Very high feature-target correlations
+
+High correlation is treated as a **warning**, not automatic proof of data leakage. Users should check whether a feature would actually be available at prediction time.
+
+## 🤖 Model Explainability
+
+FeatStory uses a Random Forest model to estimate feature importance.
+
+It also supports **SHAP-based explanations** to help understand how features contribute to model predictions.
+
+## 📄 HTML Reports
+
+FeatStory can automatically generate an HTML report containing:
+
+* Dataset overview
+* Data risks
+* Categorical feature analysis
+* Feature stories
+* Feature correlations
+* Model feature importance
+* Visualizations
+
+Example:
+
+```python
+story.generate_report()
+```
+
+This creates:
+
+```text
+featstory_report.html
+```
+
+## 🧪 Testing
+
+Run the automated tests with:
+
+```bash
+python -m pytest
+```
+
+Current test suite:
+
+```text
+5 passed
+```
+
+## 📁 Project Structure
 
 ```text
 FeatStory/
@@ -115,20 +183,11 @@ FeatStory/
 ├── tests/
 │   └── test_featstory.py
 │
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
-## Running Tests
-
-From the project folder:
-
-```bash
-python -m pytest
-```
-
-The project currently includes automated tests covering the main library functionality.
-
-## Technologies
+## 🛠️ Technologies
 
 * Python
 * Pandas
@@ -138,10 +197,27 @@ The project currently includes automated tests covering the main library functio
 * SHAP
 * Pytest
 
-## Project Goal
+## 🎯 Project Goal
 
-FeatStory is designed as an educational data science tool that helps users move beyond simply seeing feature importance and understand the relationships, patterns, and possible risks within their datasets.
+FeatStory aims to make data science analysis easier to understand by connecting statistical relationships, model importance, explainability, and data-quality warnings in one workflow.
 
-## Status
+The project is especially useful for learning and demonstrating practical data science concepts.
+
+## 🔮 Future Improvements
+
+Planned improvements include:
+
+* Better handling of classification datasets
+* More statistical tests
+* Additional feature-relationship visualizations
+* Improved report customization
+* More model types
+* Better XAI support
+* Package installation through PyPI
+* Expanded test coverage
+
+## 📌 Project Status
 
 FeatStory is currently under active development.
+
+Built as a learning-focused data science project combining **Python, statistics, machine learning, data analysis, and explainable AI**.
